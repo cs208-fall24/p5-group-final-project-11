@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title Manage Comments - Student1
+    link(rel='stylesheet' href='/css/student1.css')
+
+  body
+    h1 Manage Comments
+
+    if comments.length
+      table
+        thead
+          tr
+            th ID
+            th Comment
+            th Actions
+        tbody
+          each comment in comments
+            tr
+              td= comment.id
+              td= comment.content
+              td
+                form(action=`/comments/delete/${comment.id}` method='POST' style='display:inline')
+                  button(type='submit') Delete
+                a(href=`/comments/edit/${comment.id}`) Edit
+    else
+      p No comments yet.
+
+    a(href='/student1') Back to Major Page

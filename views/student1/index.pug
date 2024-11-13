@@ -1,7 +1,52 @@
 doctype html
-link(rel='stylesheet' href='css/student1.css')
+html
+  head
+    title A Complete Degree on How to Party - Student1
+    link(rel='stylesheet' href='/css/student1.css')
 
-head
-    title Party - student1
-body
-    h1 A complete degree on how to party!
+  body
+    h1 Lance Loper
+
+    h2 Party Studies
+
+    h2 Location
+    section
+      p Welcome to the University of AWESOME, located on Saturn 🪐! Our unique location makes every party an unforgettable experience.
+
+    h2 About
+    section
+      h3 Major Overview
+      p Dive deep into the art and science of partying, mastering everything from event planning to crowd engagement.
+      h3 Courses Offered
+      p Classes include "History of Partying," "Party Economics," and "Advanced DJ Techniques."
+      h3 Career Opportunities
+      p Graduates go on to become party planners, DJs, and event managers with skills recognized galaxy-wide.
+
+    h2 Things To Do
+    section
+      ul
+        li Attend intergalactic music festivals
+        li Organize planet-wide celebrations
+        li Master zero-gravity dancing
+
+    h2 Student Feedback
+    ul#commentList
+      if comments.length
+        each comment in comments
+          li.comment= comment
+      else
+        p No comments yet. Be the first to add your feedback!
+
+    h3 Add a Comment
+    form#addCommentForm(action='/comments/add' method='POST')
+      textarea(name='comment' required placeholder='Enter your comment here...')
+      br
+      button(type='submit') Add Comment
+
+    div.images
+      img(src='/img/party1.jpg' alt='Party Event')
+      img(src='/img/party2.jpg' alt='Intergalactic Party')
+
+    a(href='/comments') Manage Comments
+
+    script(src='/js/student1.js')
