@@ -30,17 +30,39 @@ app.get('/student1', (req, res) => {
   });
 });
 
-// Render comments management page filtered by major
+// Render Student 2's page with comments filtered by major
+app.get('/student2', (req, res) => {
+  db.all('SELECT content FROM comments WHERE major = ? ORDER BY RANDOM() LIMIT 5', ['Adventure Education'], (err, rows) => {
+    const comments = rows ? rows.map(row => row.content) : [];
+    res.render('student2', { comments });
+  });
+});
+
+// Render comments management page for all comments
 app.get('/comments', (req, res) => {
-  db.all('SELECT id, content FROM comments WHERE major = ?', ['Party Studies'], (err, rows) => {
+  db.all('SELECT id, content, major FROM comments', (err, rows) => {
     res.render('comments', { comments: rows });
   });
 });
 
-// Add a new comment with a major specified
+// Add a new comment for Student 1's major
 app.post('/comments/add', (req, res) => {
   const { comment } = req.body;
-  const major = 'Party Studies'; // Set major explicitly for Student 1's page
+  const major = 'Party Studies';
+  db.run('INSERT INTO comments (content, major) VALUES (?, ?)', [comment, major], function(err) {
+    if (err) {
+      console.error('Error adding comment:', err.message);
+      res.status(500).json({ error: 'Failed to add comment' });
+    } else {
+      res.json({ id: this.lastID, content: comment });
+    }
+  });
+});
+
+// Add a new comment for Student 2's major
+app.post('/comments/add/student2', (req, res) => {
+  const { comment } = req.body;
+  const major = 'Adventure Education';
   db.run('INSERT INTO comments (content, major) VALUES (?, ?)', [comment, major], function(err) {
     if (err) {
       console.error('Error adding comment:', err.message);
