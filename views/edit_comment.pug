@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title Edit Comment - Student1
+    link(rel='stylesheet' href='/css/student1.css')
+
+  body
+    h1 Edit Comment
+
+    form(action=`/comments/edit/${comment.id}` method='POST')
+      textarea(name='comment' required)= comment.content
+      br
+      button(type='submit') Save Changes
+
+    a(href='/comments') Cancel
