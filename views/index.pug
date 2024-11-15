@@ -1,18 +1,44 @@
 doctype html
 html
   head
-    title University of AWESOME!
+    title University Majors
     link(rel='stylesheet' href='/css/index.css')
-
   body
-    h1 University of AWESOME!
-    p Welcome to the University of AWESOME! Explore our exciting majors below and find the perfect path for you.
+    // Hero Section with Banner and Overlay
+    section.hero
+      div.hero-overlay
+        h1 Welcome to the University of the Cosmos!
+        p Discover your potential with the best majors across the galaxy.
 
-    h2 Our Majors
-    ul
-      li: a(href='/student1') Student 1 - Party Studies
-      li: a(href='/student2') Student 2 - Adventure Education
-      li: a(href='/student3') Student 3 - Galactic Science
+    // Majors Section
+    section.majors
+      h2 Choose Your Adventure
 
-    footer
-      p &copy; 2023 University of AWESOME. All rights reserved.
+      // Major: Party Studies
+      div.major
+        h3 Party Studies
+        p Join the ultimate intergalactic party on Saturn! With courses covering everything from crowd engagement to zero-gravity dance moves, you’re bound to make cosmic memories.
+        a.button(href='/student1') Explore Party Studies
+
+      // Major: Adventure Education
+      div.major
+        h3 Adventure Education
+        p Unleash your inner explorer on Mars! Learn survival skills, sustainability practices, and the art of adventure planning in extreme environments.
+        a.button(href='/student2') Explore Adventure Education
+
+    // Spotlight Section
+    section.spotlight
+      h2 Student Spotlights
+      div.spotlight-student
+        h3 Lance Loper
+        p Party Studies Enthusiast, future event manager
+
+      div.spotlight-student
+        h3 Ibro Gracanin
+        p Aspiring expedition leader, nature and adventure lover
+
+    // Footer CTA
+    footer.cta
+      h2 Ready to Start Your Adventure?
+      p Choose a major that resonates with you and start your journey today!
+      a.button(href='/comments') See What Students Are Saying
