@@ -1,19 +1,12 @@
-/* Disco Ball Background Animation */
+/* Outer Background Styling */
 body {
-    background: radial-gradient(circle, #ff5e78, #ffdeeb, #007bff, #ffd700, #00ffab);
-    background-size: 200% 200%;
-    animation: discoBall 6s infinite linear;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    color: #333;
+    background: linear-gradient(135deg, #0033A0, #D64309); /* Boise State Blue and Orange */
+    font-family: Arial, sans-serif;
+    color: #ffffff; /* White text for better contrast */
     margin: 0;
     padding: 0;
-}
-
-/* Keyframes for Disco Ball Effect */
-@keyframes discoBall {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    cursor: url('/img/disco-ball-cursor.png'), auto; /* Disco ball cursor */
+    text-align: center; /* Center all text elements by default */
 }
 
 /* Back Button Styling */
@@ -21,31 +14,61 @@ body {
     position: absolute;
     top: 20px;
     left: 20px;
-    background-color: #007bff;
+    background-color: #007bff; /* Blue for navigation */
     color: white;
+    font-size: 1.2em; /* Larger font size */
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border: 2px solid #0056b3; /* Blue border for better visibility */
+    transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
 }
 
 .button.back:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Darker blue on hover */
+    border-color: #003f88; /* Even darker border */
+    transform: scale(1.05);
+}
+
+/* Countdown Timer Section */
+.timer {
+    text-align: center;
+    background-color: #FFD700; /* Gold */
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 50%; /* Adjust to fit content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.timer h2 {
+    font-size: 1.5em;
+    color: #0033A0; /* Boise State Blue */
+    margin-bottom: 10px;
+}
+
+.timer div {
+    font-size: 1.2em;
+    color: #ffffff;
 }
 
 /* Hero Section */
 .hero {
-    background-color: rgba(255, 94, 120, 0.9);
-    color: #fff;
-    padding: 40px;
+    background-color: #0033A0; /* Boise State Blue */
+    color: #ffffff; /* White text for contrast */
+    padding: 20px;
     text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     animation: fadeIn 2s ease;
+    max-width: 60%; /* Adjust to fit content */
+    margin: 20px auto;
 }
 
 .hero h1 {
     font-size: 3em;
     margin: 0;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .hero p {
@@ -54,17 +77,9 @@ body {
     animation: fadeIn 3s ease;
 }
 
-/* Header styling */
-h1 {
-    font-size: 2.5em;
-    text-align: center;
-    margin-top: 20px;
-    font-weight: bold;
-}
-
 /* Section headings */
 h2 {
-    color: #444;
+    color: #FFD700; /* Gold for section headings */
     font-weight: bold;
     margin-top: 20px;
     text-align: center;
@@ -74,10 +89,12 @@ h2 {
 section {
     margin: 20px auto;
     padding: 15px;
-    width: 80%;
-    background-color: rgba(255, 255, 255, 0.8); /* Slight transparency */
+    max-width: 60%; /* Ensure sections fit text content */
+    background-color: #ffffff; /* White for section background */
+    color: #0033A0; /* Boise State Blue for text */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center text for all sections */
     transition: transform 0.3s ease;
 }
 
@@ -85,24 +102,55 @@ section:hover {
     transform: scale(1.05);
 }
 
+/* Fun Facts Section */
+.fun-facts {
+    text-align: center;
+    background-color: #ffffff;
+    color: #0033A0; /* Boise State Blue */
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 50%; /* Adjust to fit text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-style: italic;
+}
+
 /* Centered Feedback Section */
 .feedback {
     text-align: center;
-    max-width: 600px;
+    max-width: 50%; /* Adjust dynamically to fit text */
     margin: 0 auto;
     padding: 20px;
-    background-color: #ffebcd;
+    background-color: #FFD700; /* Gold for feedback background */
+    color: #0033A0; /* Boise State Blue for text */
     border-radius: 10px;
 }
 
 /* Comment styling */
 .comment {
-    background-color: #fce4ec;
+    display: flex;
+    justify-content: space-between;
+    background-color: #D64309; /* Boise State Orange for comments */
     padding: 10px;
     border-radius: 5px;
     margin: 5px 0;
-    border-left: 5px solid #ff5e78;
+    border-left: 5px solid #FFD700; /* Gold border */
+    color: #ffffff; /* White text for comments */
     font-style: italic;
+}
+
+.upvote-btn {
+    background-color: #0033A0; /* Boise State Blue */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.upvote-btn:hover {
+    background-color: #002080; /* Darker shade of Blue */
 }
 
 /* Add Comment Button */
@@ -110,7 +158,7 @@ section:hover {
     display: inline-block;
     width: 150px; /* Fixed width for Add Comment */
     padding: 10px;
-    background-color: #333;
+    background-color: #0033A0; /* Boise State Blue */
     color: white;
     text-align: center;
     border: none;
@@ -123,7 +171,7 @@ section:hover {
 }
 
 .add-comment-btn:hover {
-    background-color: #555;
+    background-color: #002080; /* Darker shade of Boise State Blue */
 }
 
 /* Smaller Manage Comments Button */
@@ -132,17 +180,20 @@ section:hover {
     width: 100px; /* Smaller fixed width */
     padding: 6px; /* Smaller padding */
     font-size: 0.9em; /* Smaller font size */
-    background-color: #333;
+    background-color: #D64309; /* Boise State Orange */
     color: #fff;
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border: 2px solid #b53107; /* Orange border for better visibility */
+    transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
     margin-top: 10px;
 }
 
 .manage-comments-btn:hover {
-    background-color: #555;
+    background-color: #b53107; /* Darker shade of Orange */
+    border-color: #8a2505; /* Even darker border */
+    transform: scale(1.05);
 }
 
 /* Form styling */
@@ -180,6 +231,7 @@ textarea {
     height: auto;
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
@@ -191,7 +243,7 @@ textarea {
 .gallery figcaption {
     font-size: 1em;
     margin-top: 8px;
-    color: #444;
+    color: #0033A0; /* Boise State Blue */
     font-weight: bold;
 }
 
@@ -199,4 +251,27 @@ textarea {
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+/* General Button Styling */
+button, .button {
+    font-size: 1.2em; /* Increased font size for readability */
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Remove bullet points for the "Things To Do" list */
+ul.no-bullets {
+    list-style: none; /* Removes bullet points */
+    padding: 0; /* Removes default padding */
+}
+
+ul.no-bullets li {
+    margin: 10px 0; /* Adds spacing between items */
+    font-size: 1.2em; /* Slightly larger font for readability */
 }
