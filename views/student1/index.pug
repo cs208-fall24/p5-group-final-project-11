@@ -3,16 +3,21 @@ html
   head
     title Party Studies - Student 1
     link(rel='stylesheet' href='/css/student1.css')
+    script(src='/js/student1.js' defer)
   body
     // Back to Main Page Button (Top-Left)
     a.button.back(href='/') Back to Main Page
 
+    // Countdown Timer Section
+    section.timer
+      h2 Countdown to the Next Intergalactic Party
+      div#countdown Countdown Loading...
+
     // Hero Section
     section.hero
-      h1 Welcome to Party Studies!
-      p Discover the ultimate in party planning, event creation, and intergalactic fun.
-
-    h2 Party Studies
+      div.hero-overlay
+        h1 Welcome to Party Studies!
+        p Discover the ultimate in party planning, event creation, and intergalactic fun.
 
     h2 Location
     section.location
@@ -29,10 +34,15 @@ html
 
     h2 Things To Do
     section.activities
-      ul
+      ul.no-bullets
         li 🎉 Attend intergalactic music festivals
         li 🪐 Organize planet-wide celebrations
         li 🚀 Master zero-gravity dancing
+
+    // Did You Know? Section
+    h2 Did You Know?
+    section.fun-facts
+      p#funFact Fun Fact Loading...
 
     // Student Feedback Section
     h2 Student Feedback
@@ -40,9 +50,11 @@ html
       ul#commentList
         if comments.length
           each comment in comments
-            li.comment= comment
+            li.comment
+              span= comment
+              button.upvote-btn(data-id=comment.id) 👍 0
         else
-          p No comments yet. Be the first to add your feedback!
+          p.no-comments-message No comments yet. Be the first to add your feedback!
 
       h3 Add a Comment
       form#addCommentForm(action='/comments/add' method='POST')
@@ -50,7 +62,7 @@ html
         br
         button(type='submit' class='add-comment-btn') Add Comment
 
-      // Separate class for Manage Comments Button
+      // Manage Comments Button
       a.button.manage-comments-btn(href='/comments') Manage Comments
 
     // Gallery Section with Captions
@@ -62,5 +74,3 @@ html
       figure
         img(src='/img/party2.jpg' alt='DJ Booth')
         figcaption DJ Booth and Music Vibes
-
-    script(src='/js/student1.js')
