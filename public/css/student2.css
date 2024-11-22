@@ -1,3 +1,96 @@
-body{
-    background-color: orange;
+/* General body styling */
+body {
+    background-color: hotpink;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Section headings */
+h2 {
+    color: #444;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Section styling */
+section {
+    margin: 20px 0;
+    padding: 0 15px;
+}
+
+/* Unordered list styling */
+ul {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+li {
+    list-style-type: square;
+    margin: 5px 0;
+}
+
+/* Styling for the images section */
+.images {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.images img {
+    width: 200px; /* Fixed width for consistent image sizing */
+    height: auto; /* Keeps aspect ratio */
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    margin: 10px; /* Space around images */
+}
+
+/* Comment styling */
+.comment {
+    background-color: #ffffe0;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+/* Form styling */
+form {
+    margin-top: 20px;
+}
+
+/* Textarea styling for adding comments */
+textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+}
+
+/* Button styling */
+button {
+    margin-top: 10px;
+    background-color: #333;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #555;
 }

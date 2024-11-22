@@ -1,9 +1,47 @@
 doctype html
-link(rel='stylesheet' href='css/student2.css')
+html
+  head
+    title Esports Major - Student2
+    link(rel='stylesheet' href='css/student2.css')
+    script(src='/js/student2.js')
 
-head
-    title World of E-Sports - Student 2
-body
+  body
     h1 Ibro Gracanin
-    
-    h1 You will learn how to weave baskets underwater
+
+    h2 Collegiate Esports
+
+    h2 Location
+    section
+      p Our state of the art arena is located in the heart of downtown Boise.
+
+    h2 About
+    section
+      h3 History
+      p Gaming has evolved from something you did casually to a billion dollar industry.
+      h3 Techniques
+      p Students learn advanced gaming strategies, teamwork, and the psychology behind competitive gaming.
+      h3 Career Opportunities
+      p Graduates can explore careers in gaming, streaming, and broadcasting.
+
+    h2 Things To Do
+    section
+      ul
+        li Compete in national and international tournaments
+        li Stream gameplay and build your fanbase.
+        li Compete in games such as CSGO, LoL, Valorant, and Rocket League.
+
+    h2 Student Feedback
+    ul#commentList
+      if comments.length
+        each comment in comments
+          li.comment= comment
+      else
+        p No comments yet. Be the first to add your feedback!
+
+    h3 Add a Comment
+    form#addCommentForm(action='/comments/add' method='POST')
+      textarea(name='comment' required placeholder='Enter your comment here...')
+      br
+      button(type='submit') Add Comment
+
+    a(href='/comments') Manage Comments
