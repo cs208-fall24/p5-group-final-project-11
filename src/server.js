@@ -32,7 +32,7 @@ app.get('/student1', (req, res) => {
 
 // Render Student 2's page with comments filtered by major
 app.get('/student2', (req, res) => {
-  db.all('SELECT content FROM comments WHERE major = ? ORDER BY RANDOM() LIMIT 5', ['Adventure Education'], (err, rows) => {
+  db.all('SELECT content FROM comments WHERE major = ? ORDER BY RANDOM() LIMIT 5', ['Esport Major'], (err, rows) => {
     const comments = rows ? rows.map(row => row.content) : [];
     res.render('student2', { comments });
   });
@@ -62,7 +62,7 @@ app.post('/comments/add', (req, res) => {
 // Add a new comment for Student 2's major
 app.post('/comments/add/student2', (req, res) => {
   const { comment } = req.body;
-  const major = 'Adventure Education';
+  const major = 'Esport Major';
   db.run('INSERT INTO comments (content, major) VALUES (?, ?)', [comment, major], function(err) {
     if (err) {
       console.error('Error adding comment:', err.message);
