@@ -1,6 +1,6 @@
 # Retrospective
 
-- name: Jane Doe
+- name: Ibro Gracanin
 - email: janedoe@u.boisestate.edu
 
 ## Experience
