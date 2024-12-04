@@ -1,96 +1,121 @@
-/* General body styling */
+/* General Styles for the body element */
 body {
-    background-color: hotpink;
     font-family: Arial, sans-serif;
-    color: #333;
     margin: 0;
     padding: 0;
-}
-
-/* Header styling */
-h1 {
-    font-size: 2.5em;
+    background-color: #F3F3F3;
+    color: #0033A0;
+  }
+  
+  /* Header styles for h1 and h2 elements */
+  h1, h2 {
     text-align: center;
-    margin-top: 20px;
-    font-weight: bold;
-}
-
-/* Section headings */
-h2 {
-    color: #444;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-/* Section styling */
-section {
-    margin: 20px 0;
-    padding: 0 15px;
-}
-
-/* Unordered list styling */
-ul {
-    padding-left: 20px;
-    margin: 10px 0;
-}
-
-li {
-    list-style-type: square;
+    color: #FF6600;
+  }
+  
+  /* Style for h3 elements */
+  h3 {
+    color: #0033A0;
+    border-bottom: 2px solid #FF6600;
+    margin-bottom: 10px;
+  }
+  
+  /* Section container styles */
+  section {
+    padding: 15px;
+    margin: 10px auto;
+    background-color: white;
+    border: 1px solid #CCCCCC;
+    border-radius: 8px;
+    max-width: 800px;
+  }
+  
+  /* Styles for unordered lists */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Styles for list items */
+  li {
     margin: 5px 0;
-}
-
-/* Styling for the images section */
-.images {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-.images img {
-    width: 200px; /* Fixed width for consistent image sizing */
-    height: auto; /* Keeps aspect ratio */
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    margin: 10px; /* Space around images */
-}
-
-/* Comment styling */
-.comment {
-    background-color: #ffffe0;
-    padding: 10px;
+    padding: 5px 10px;
     border-radius: 5px;
-    margin: 5px 0;
-}
-
-/* Form styling */
-form {
-    margin-top: 20px;
-}
-
-/* Textarea styling for adding comments */
-textarea {
+    background-color: #CCCCCC;
+    color: #0033A0;
+  }
+  
+  /* Special styles for list items with the "comment" class */
+  li.comment {
+    background-color: #FF6600;
+    color: white;
+  }
+  
+  /* Form container styles */
+  form {
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 15px;
+    border: 1px solid #CCCCCC;
+    border-radius: 8px;
+    background-color: white;
+  }
+  
+  /* Styles for textarea inside the form */
+  textarea {
     width: 100%;
     height: 80px;
+    margin-bottom: 10px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
     padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    resize: vertical;
-    font-family: Arial, sans-serif;
-    font-size: 1em;
-}
-
-/* Button styling */
-button {
-    margin-top: 10px;
-    background-color: #333;
+    font-size: 1rem;
+  }
+  
+  /* Button styles */
+  button {
+    background-color: #0033A0;
     color: white;
-    padding: 8px 16px;
     border: none;
-    cursor: pointer;
+    padding: 10px 20px;
     border-radius: 5px;
-    font-size: 1em;
-}
-
-button:hover {
-    background-color: #555;
-}
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  /* Button hover effect */
+  button:hover {
+    background-color: #FF6600;
+  }
+  
+  /* Styles for the image container */
+  .images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px auto;
+  }
+  
+  /* Styles for individual images */
+  .images img {
+    max-width: 400px;
+    height: auto;
+    border: 3px solid #0033A0;
+    border-radius: 5px;
+  }
+  
+  /* Styles for links */
+  a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #0033A0;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Link hover effect */
+  a:hover {
+    color: #FF6600;
+  }
+  

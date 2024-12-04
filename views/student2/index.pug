@@ -14,6 +14,7 @@ html
     section
       p Our state of the art arena is located in the heart of downtown Boise.
 
+    // Details about the major
     h2 About
     section
       h3 History
@@ -23,6 +24,7 @@ html
       h3 Career Opportunities
       p Graduates can explore careers in gaming, streaming, and broadcasting.
 
+    // Lists info on the program and activities
     h2 Things To Do
     section
       ul
@@ -30,6 +32,7 @@ html
         li Stream gameplay and build your fanbase.
         li Compete in games such as CSGO, LoL, Valorant, and Rocket League.
 
+    // Displays user comments
     h2 Student Feedback
     ul#commentList
       if comments.length
@@ -38,10 +41,17 @@ html
       else
         p No comments yet. Be the first to add your feedback!
 
+    // Lets users add comments
     h3 Add a Comment
     form#addCommentForm(action='/comments/add' method='POST')
       textarea(name='comment' required placeholder='Enter your comment here...')
       br
       button(type='submit') Add Comment
 
+    // Section for images
+    div.images
+      img(src='/img/esports1.jpg' alt='Conference Game')
+      img(src='/img/esports2.jpg' alt='Become a champion')
+      
+    // Manage comments link
     a(href='/comments') Manage Comments
